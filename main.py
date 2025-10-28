@@ -47,7 +47,7 @@ def process_choice(update: Update, context):
     return ConversationHandler.END
 
 if __name__ == '__main__':
-    application = ApplicationBuilder().token("YOUR_TELEGRAM_BOT_TOKEN").build()
+    application = ApplicationBuilder().token(bot).build()
 
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler('start', start)],
