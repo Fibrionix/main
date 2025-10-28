@@ -1,5 +1,10 @@
-from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
-from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler
+import telebot
+import os
+from dotenv import load_dotenv
+
+load_dotenv()  # Загружает .env файл
+# Создаем экземпляр бота
+bot = telebot.TeleBot(os.getenv('BOT_TOKEN'))
 
 # Типы вопросов и соответствующие типы темпераментов
 TEMPERAMENTS = {
